@@ -1,6 +1,8 @@
 :root {
   --blanco: #fff;
   --primary: #f59e0b;
+  --negro: #000000;
+  --error: #ff0303;
 }
 html {
   font-size: 62.5%;
@@ -16,6 +18,7 @@ body {
 }
 .titulo {
   text-align: center;
+  color: var(--primary);
   font-size: 3rem;
   margin-top:5rem;
 }
@@ -34,6 +37,7 @@ body {
       margin-top: 5rem;
   }
 }
+
 .formulario,
 .campo {
   display: flex;
@@ -42,39 +46,52 @@ body {
 }
 .formulario label {
   font-size: 2rem;
+  color: var(--primary);
   font-weight: 700;
 }
 .formulario input[type="text"], 
 .formulario select {
   padding: 1rem;
   background-color: transparent;
-  border: .3rem solid var(--blanco);
+  border: .3rem solid var(--primary);
   border-radius: 1rem;
-  color: var(--blanco);
+  color: var(--primary);
   font-weight: 400;
   font-size: 1.8rem;
 }
+
+.formulario input:focus {
+  background-color:transparent; 
+  border: .3rem solid var(--primary);
+  }
+
+option{
+  background: rgba(0, 0, 0, 1);
+}
+
 .formulario input[type="submit"] {
   background-color: var(--primary);
   border: none;
-  color: var(--blanco);
-  font-weight: 700;
+  color: var(--negro);
+  font-weight: 900;
   font-size: 1.4rem;
+  border-radius: 1rem;
   text-transform: uppercase;
   cursor: pointer;
   padding: 1rem;
   margin-top: 2rem;
 }
 .campo ::placeholder { 
-  color: var(--blanco);
+  color: var(--primary);
   opacity: 1; 
 }
 
 .resultado {
-  background-color: var(--blanco);
+  background-color: transparent;
   padding: 1rem;
+  border: .3rem solid var(--primary);
   border-radius: 1rem;
-  color: #2b353b;
+  color: var(--primary);
   text-align: center;
   margin-top: 2rem;
 }
@@ -102,3 +119,4 @@ body {
   color: var(--blanco);
   font-size: 2rem;
 }
+
